@@ -1,0 +1,24 @@
+<h1> Produits: </h1>
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Produit</td>
+        <td>Quantite</td>
+        <td>Categorie</td>
+        <td>Image</td>
+    </tr>
+    <tr *ngFor="let p of produits">
+    <td>{{p.idProduit}}</td>
+    <td>{{p.libProduit}}</td>
+    <td>{{p.quantite}}</td>
+    <td>{{p.categorie.description}}</td>
+    <td><img src="http://localhost:4040/{{p.img}}" style="height: 50px; width:100px;"> </td>
+    </tr>
+
+</table>
+
+<br>
+<br>
+
+<button (click)="retour()">Retour</button>

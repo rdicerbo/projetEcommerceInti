@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="http://localhost:4044/css/Gestion.css">
+</head>
+
+    <h1>Inscription</h1>
+
+    <form (ngSubmit)="inscription()">
+        Nom:  <input type="text" name="nom" [(ngModel)]="utilisateur.nom"/>
+        <br>
+        Prenom:  <input type="text" name="prenom" [(ngModel)]="utilisateur.prenom"/>
+        <br>
+        Identifiant:  <input type="text" name="username" [(ngModel)]="utilisateur.username"/>
+        <br>
+        Mot de passe:  <input type="password" name="password" [(ngModel)]="utilisateur.password"/>
+        <br>
+        <br> 
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <br> 
+    <br> 
+    Déjà inscrit? 
+    <button (click)="retour()">Connection</button>

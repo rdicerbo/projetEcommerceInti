@@ -1,0 +1,34 @@
+<h1> Ajout d'une categorie: </h1>
+
+<form (ngSubmit)="AjouterCat()">
+    Nom categorie: <input type="text" name="nomCategorie" [(ngModel)]="categorie.nomCategorie">
+    <br>
+    Description categorie: <input type="text" name="description" [(ngModel)]="categorie.description">
+    <br>
+    <button type="submit">Ajouter</button>
+</form>
+
+<br>
+<br>
+<br>
+<h1> Categories: </h1>
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Categorie</td>
+        <td>Description</td>
+        <td>Action 1</td>
+        <td>Action 2</td>
+        <td>Action 3</td>
+    </tr>
+    <tr *ngFor="let c of categories">
+    <td>{{c.idCategorie}}</td>
+    <td>{{c.nomCategorie}}</td>
+    <td>{{c.description}}</td>
+    <td><button (click)="supprimer(c.idCategorie)">supprimer</button></td>
+    <td><button (click)="modifier(c.idCategorie)">Modifier</button></td>
+    <td><button (click)="prodAss(c.idCategorie)">Produits associes</button></td>
+    </tr>
+
+</table>
